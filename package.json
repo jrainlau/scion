@@ -1,0 +1,30 @@
+{
+  "name": "easy-cli",
+  "version": "0.0.1",
+  "description": "A simple CLI for creating your projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "easy": "bin/easy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrainlau/easy-cli.git"
+  },
+  "keywords": [
+    "easy",
+    "cli",
+    "es6"
+  ],
+  "author": "Jrain Lau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jrainlau/easy-cli/issues"
+  },
+  "homepage": "https://github.com/jrainlau/easy-cli#readme",
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
+}

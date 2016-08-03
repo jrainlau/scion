@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+process.env.NODE_PATH = __dirname + '/../node_modules/'
+
+var program = require('commander')
+
+program
+	.version(require('../package').version )
+
+program
+  .command('dev')
+  .alias('d')
+  .description('本地编译项目或页面，开发模式')
+  .option('-a, --addrx [addrx]', '设置端口')
+  .action(function(option) {
+    console.log(option)
+  })
+
+program.parse(process.argv)
+
+if(!program.args.length){
+  program.help()
+}
