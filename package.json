@@ -1,5 +1,5 @@
 {
-  "name": "easy-cli",
+  "name": "seed-cli",
   "version": "0.0.1",
   "description": "A simple CLI for creating your projects",
   "main": "index.js",
@@ -7,24 +7,27 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "easy": "bin/easy"
+    "seed": "bin/seed"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jrainlau/easy-cli.git"
+    "url": "git+https://github.com/jrainlau/seed-cli.git"
   },
   "keywords": [
-    "easy",
+    "seed",
     "cli",
     "es6"
   ],
   "author": "Jrain Lau",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jrainlau/easy-cli/issues"
+    "url": "https://github.com/jrainlau/seed-cli/issues"
   },
-  "homepage": "https://github.com/jrainlau/easy-cli#readme",
+  "homepage": "https://github.com/jrainlau/seed-cli#readme",
   "dependencies": {
+    "chalk": "^1.1.3",
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
     "commander": "^2.9.0"
   }
 }

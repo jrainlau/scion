@@ -1,0 +1,49 @@
+#!/usr/bin/env node
+
+process.env.NODE_PATH = __dirname + '/../node_modules/'
+
+const program = require('commander')
+
+program
+	.version(require('../package').version )
+
+program
+	.usage('<command>')
+
+program
+	.command('init')
+	.description('Generate a new project')
+  .alias('i')
+  .action(function() {
+    require('../command/init')()
+  })
+
+program
+	.command('tpl')
+	.description('Add a new template')
+  .alias('t')
+  .action(function() {
+    require('../command/tpl')()
+  })
+
+program
+	.command('list')
+	.description('List all the templates')
+	.alias('l')
+	.action(() => {
+		require('../command/list')()
+	})
+
+program
+	.command('delete')
+	.description('Delete a template')
+	.alias('d')
+	.action(() => {
+		require('../command/delete')()
+	})
+
+program.parse(process.argv)
+
+if(!program.args.length){
+  program.help()
+}
