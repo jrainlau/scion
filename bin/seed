@@ -1,4 +1,5 @@
-#!/usr/bin/env node
+#!/usr/bin/env node --harmony
+'use strict'
 
 process.env.NODE_PATH = __dirname + '/../node_modules/'
 
@@ -19,11 +20,11 @@ program
   })
 
 program
-	.command('tpl')
+	.command('add')
 	.description('Add a new template')
-  .alias('t')
+  .alias('a')
   .action(function() {
-    require('../command/tpl')()
+    require('../command/add')()
   })
 
 program

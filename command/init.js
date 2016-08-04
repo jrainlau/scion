@@ -1,10 +1,11 @@
+'use strict'
 const exec = require('child_process').exec
 const co = require('co')
 const prompt = require('co-prompt')
 const config = require('../templates')
 const chalk = require('chalk')
 
-module.exports = run = () => {
+module.exports = () => {
  	co(function *() {
   	let tplName = yield prompt('Template name: ')
   	let projectName = yield prompt('Project name: ')

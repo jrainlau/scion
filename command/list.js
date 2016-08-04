@@ -1,6 +1,7 @@
+'use strict'
 const config = require('../templates')
 
-module.exports = run = () => {
+module.exports = () => {
  	console.log(config.tpl)
  	process.exit()
 }
