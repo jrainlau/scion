@@ -13,7 +13,7 @@ module.exports = () => {
 
     if (!config.tpl[tplName]) {
       config.tpl[tplName] = {}
-      config.tpl[tplName]['url'] = gitUrl
+      config.tpl[tplName]['url'] = gitUrl.replace(/[\u0000-\u0019]/g, '')
       config.tpl[tplName]['branch'] = branch
     } else {
       console.log(chalk.red('Template has already existed!'))

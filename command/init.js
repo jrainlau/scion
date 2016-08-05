@@ -23,7 +23,11 @@ module.exports = () => {
 
 	  console.log(chalk.white('\n Start generating...'))
 
-	  exec(cmdStr, () => {
+	  exec(cmdStr, (error, stdout, stderr) => {
+      if (error) {
+        console.log(error)
+        process.exit()
+      }
       console.log(chalk.green('\n √ Generation completed!'))
       console.log(`\n cd ${projectName} && npm install \n`)
       process.exit()
