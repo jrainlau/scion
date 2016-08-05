@@ -77,7 +77,7 @@ After adding new templates, you could use this command to generate your own proj
 $ scion init
 
 /* enter a template name which was added by yourself */
-Template name: motto
+Template name: my-tpl-name
 
 /* your project name */
 Project name: my-new-project
@@ -107,10 +107,7 @@ Template deleted!
 The last template list is:
 
 { tpl:
-   { motto:
-      { url: 'https://github.com/jrainlau/motto.git',
-        branch: 'gh-pages' },
-     'my-tpl-name': undefined } }
+   { 'my-tpl-name': undefined } }
 ```
 once a template is `undefined`, it means you've deleted it successfully.
 
