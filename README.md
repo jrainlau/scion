@@ -92,6 +92,28 @@ Start generating...
 ```
 It's easy, right?
 
+### delete | d
+To delete a template, you could use this command:
+```
+$ scion delete
+```
+and type the template name you want to delete:
+```
+Template name: my-tpl-name
+```
+if the name exist, you will see:
+```
+Template deleted!
+The last template list is:
+
+{ tpl:
+   { motto:
+      { url: 'https://github.com/jrainlau/motto.git',
+        branch: 'gh-pages' },
+     'my-tpl-name': undefined } }
+```
+once a template is `undefined`, it means you've deleted it successfully.
+
 # Template
 The most important part of Scion is `template`. All templates' infomation were list in the `templates.json`.
 A template means a project sample, which has a simple or complex file structure.
@@ -100,7 +122,6 @@ You can create your own templates repository, and push your templates in differe
 
 # License
 MIT.
-
 
 
 
