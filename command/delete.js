@@ -19,6 +19,9 @@ module.exports = () => {
 		fs.writeFile(__dirname + '/../templates.json', JSON.stringify(config), 'utf-8', (err) => {
 			if (err) console.log(err)
 			console.log(chalk.green('Template deleted!'))
+      console.log(chalk.grey('The last template list is: \n'))
+      console.log(config)
+      console.log('\n')
 			process.exit()
 		})
   })

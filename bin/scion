@@ -12,14 +12,6 @@ program
 	.usage('<command>')
 
 program
-	.command('init')
-	.description('Generate a new project')
-  .alias('i')
-  .action(function() {
-    require('../command/init')()
-  })
-
-program
 	.command('add')
 	.description('Add a new template')
   .alias('a')
@@ -34,6 +26,14 @@ program
 	.action(() => {
 		require('../command/list')()
 	})
+
+program
+	.command('init')
+	.description('Generate a new project')
+  .alias('i')
+  .action(function() {
+    require('../command/init')()
+  })
 
 program
 	.command('delete')
