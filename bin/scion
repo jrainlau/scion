@@ -15,7 +15,7 @@ program
 	.command('add')
 	.description('Add a new template')
   .alias('a')
-  .action(function() {
+  .action(() => {
     require('../command/add')()
   })
 
@@ -31,7 +31,7 @@ program
 	.command('init')
 	.description('Generate a new project')
   .alias('i')
-  .action(function() {
+  .action(() => {
     require('../command/init')()
   })
 
