@@ -19,7 +19,7 @@ module.exports = () => {
 		gitUrl = config.tpl[tplName].url
 		branch = config.tpl[tplName].branch
 
-    let cmdStr = `git clone ${gitUrl} ${projectName} && cd ${projectName} && git checkout ${branch}`
+    let cmdStr = `git clone -b ${branch} ${gitUrl} ${projectName}`
 
 	  console.log(chalk.white('\n Start generating...'))
 
