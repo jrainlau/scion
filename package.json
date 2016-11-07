@@ -1,6 +1,6 @@
 {
   "name": "scion-cli",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A simple CLI for creating your projects",
   "main": "index.js",
   "scripts": {

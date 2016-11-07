@@ -1,5 +1,7 @@
+![Scion Logo](./logo.png)
+
 # SCION
-A light CLI to generate projects in an easy way.
+A light tool to generate projects in an easy way.
 
 # Installation
 ```
