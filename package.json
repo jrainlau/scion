@@ -1,5 +1,5 @@
 {
-  "name": "scionsci",
+  "name": "scion-cli",
   "version": "0.1.0",
   "description": "A simple CLI for creating your projects",
   "bin": {
