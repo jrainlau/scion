@@ -1,47 +1,50 @@
-#!/usr/bin/env node --harmony
-'use strict'
+#!/usr/bin/env node
 
 process.env.NODE_PATH = __dirname + '/../node_modules/'
+
+const { resolve } = require('path')
+
+const res = command => resolve(__dirname, '../commands/', command)
 
 const program = require('commander')
 
 program
-	.version(require('../package').version )
+  .version(require('../package').version )
 
 program
-	.usage('<command>')
+  .usage('<command>')
 
 program
-	.command('add')
-	.description('Add a new template')
+  .command('add')
+  .description('Add a new template')
   .alias('a')
   .action(() => {
-    require('../command/add')()
+    require(res('add'))
   })
 
 program
-	.command('list')
-	.description('List all the templates')
-	.alias('l')
-	.action(() => {
-		require('../command/list')()
-	})
+  .command('list')
+  .description('List all the templates')
+  .alias('l')
+  .action(() => {
+    require(res('list'))
+  })
 
 program
-	.command('init')
-	.description('Generate a new project')
+  .command('init')
+  .description('Generate a new project')
   .alias('i')
   .action(() => {
-    require('../command/init')()
+    require(res('init'))
   })
 
 program
-	.command('delete')
-	.description('Delete a template')
-	.alias('d')
-	.action(() => {
-		require('../command/delete')()
-	})
+  .command('delete')
+  .description('Delete a template')
+  .alias('d')
+  .action(() => {
+    require(res('delete'))
+  })
 
 program.parse(process.argv)
 

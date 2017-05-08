@@ -1,11 +1,7 @@
 {
-  "name": "scion-cli",
-  "version": "0.0.5",
+  "name": "scionsci",
+  "version": "0.1.0",
   "description": "A simple CLI for creating your projects",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "bin": {
     "scion": "bin/scion"
   },
@@ -26,8 +22,10 @@
   "homepage": "https://github.com/jrainlau/scion#readme",
   "dependencies": {
     "chalk": "^1.1.3",
-    "co": "^4.6.0",
-    "co-prompt": "^1.0.0",
-    "commander": "^2.9.0"
+    "cli-table": "^0.3.1",
+    "commander": "^2.9.0",
+    "download-git-repo": "^1.0.0",
+    "inquirer": "^3.0.6",
+    "ora": "^1.2.0"
   }
 }
