@@ -8,7 +8,7 @@ const question = [
   {
     type: 'input',
     name: 'name',
-    message: 'Which template you want to delete?',
+    message: 'Which template you want to delete:',
     validate (val) {
       if (tplList[val]) {
         return true
@@ -28,6 +28,6 @@ module.exports = prompt(question).then(({ name }) => {
     if (err) {
       console.log(err)
     }
-    listTable(tplList, 'Template has been deleted successfully')
+    listTable(tplList, 'Template has been deleted successfully!')
   })
 })

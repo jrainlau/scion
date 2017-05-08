@@ -37,7 +37,7 @@ const question = [
   {
     type: 'input',
     name: 'place',
-    message: 'Where to init the project?',
+    message: 'Where to init the project:',
     default: './'
   }
 ]
