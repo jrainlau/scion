@@ -9,16 +9,25 @@ const table = new Table({
 })
 
 function listTable (tplList, lyric) {
-  Object.keys(tplList).forEach((key) => {
-    table.push([key, tplList[key]['owner/name'], tplList[key]['branch']])
-    if (table.length === Object.keys(tplList).length) {
-      console.log(table.toString())
-      if (lyric) {
-        console.log(chalk.green(`\u2714 ${lyric}`))
+  const list = Object.keys(tplList)
+  if (list.length) {
+    list.forEach((key) => {
+      table.push([key, tplList[key]['owner/name'], tplList[key]['branch']])
+      if (table.length === list.length) {
+        console.log(table.toString())
+        if (lyric) {
+          console.log(chalk.green(`\u2714 ${lyric}`))
+        }
+        process.exit()
       }
-      process.exit()
+    })
+  } else {
+    console.log(table.toString())
+    if (lyric) {
+      console.log(chalk.green(`\u2714 ${lyric}`))
     }
-  })
+    process.exit()
+  }
 }
 
 exports.listTable = listTable
