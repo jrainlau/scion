@@ -1,5 +1,4 @@
 const Metalsmith = require('metalsmith')
-const layout = require('metalsmith-layouts')
 const { resolve } = require('path')
 const { prompt } = require('inquirer')
 const currentFoler = process.cwd()
