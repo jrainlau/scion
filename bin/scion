@@ -46,6 +46,14 @@ program
     require(res('delete'))
   })
 
+program
+  .command('map')
+  .description('Place files to diffirent position')
+  .alias('m')
+  .action(() => {
+    require(res('map'))
+  })
+
 program.parse(process.argv)
 
 if(!program.args.length){
