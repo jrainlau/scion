@@ -2,7 +2,7 @@
 
 ![](./preview/logo.png)
 
-**Scion** is a scaffold for intiating new projects from a given template.
+**Scion** is a scaffold for initiating new projects from a given template.
 
 ## Template
 A *template* is a sample folder with many files. You could place a template to GitHub, GitLab, Bitbucket or any other code repository, even in your local mechine!
