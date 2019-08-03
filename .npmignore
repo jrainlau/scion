@@ -1,1 +1,4 @@
-/node_modules
+docs/
+node_modules/
+src/
+rollup.config.js
